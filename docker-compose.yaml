@@ -1,0 +1,8 @@
+version: "3.8"
+services: 
+ ashuapp1: # name of app which can be anything 
+  image: anjicl:appv1 # name of iamge i want to build
+  build: . # location of dockerfile 
+  container_name: anjic11
+  ports:
+  - 1236:80
