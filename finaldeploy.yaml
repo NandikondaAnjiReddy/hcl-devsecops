@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: anjifinal-deploy
+  name: anjifinal-deploy
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: anjifinal-deploy
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: anjifinal-deploy
+    spec:
+      containers:
+      - image: dockerashu/ashuhcl:appfinal
+        name: ashuhcl
+        ports:
+        - containerPort: 80
+        resources: {}
+status: {}
